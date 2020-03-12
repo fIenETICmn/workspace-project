@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+<body>
+    <h3>Login Here:</h3>
+        <form action = "" method = "POST">
+            {% csrf_token %}
+            <label>Email :</label> &nbsp; <input  type="email" name = "email" ><br>
+            <label>Password :</label> &nbsp; <input type="password" name = "password"><br>
+            <a href="{% url 'password_reset' %}">Forget Password</a>
+            <button type="submit">Submit</button>
+
+        </form>
+        {% block content %}
+        {% endblock %}
+</body>
+</html>
